@@ -5,11 +5,11 @@
     <classes>
       <class name="paralleltest.automation.payments"/>
     </classes>
-  </test><!-- Test -->
-   <!-- <test name="TestOnfirefox">
+  </test>
+   <test name="TestOnfirefox">
     <classes>
       <class name="paralleltest.automation.customerCreation"/>
     </classes>
-  </test> --> 
-  <!-- <parameter name="browser" value="CHROME" /> -->
-</suite> <!-- Suite -->
+  </test> 
+   <!-- <parameter name="browser" value="CHROME" /> -->
+</suite> 
