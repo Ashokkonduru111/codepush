@@ -23,9 +23,11 @@ public class STDCIFpage {
 //		capp.setPlatform(Platform.WINDOWS);
 //		driver = new RemoteWebDriver(url, capp);
 				WebDriver driver=new ChromeDriver();
+				
 		driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	    driver.get("https://10.20.9.23:9004/FCJNeoWeb/LoginServlet?entity=ENTITY_ID1");
+	 //  driver.get("www.google.com");
 		Thread.sleep(5000);
 		
 		driver.findElement(By.xpath("//*[@id='details-button']")).click();
@@ -35,10 +37,14 @@ public class STDCIFpage {
         driver.switchTo().frame(e2);
         driver.findElement(By.xpath("//body[contains(@onload,'chkErr')]//input[@onclick='closeAlerts(event)']")).click();
         driver.switchTo().parentFrame();
-		driver.findElement(By.xpath("//input[@id='LOGINUSERID']")).sendKeys("SUMANTHMAKER");
-		driver.findElement(By.xpath("//input[@id='user_pwd']")).sendKeys("Sumanth@01");
+		driver.findElement(By.xpath("//input[@id='LOGINUSERID']")).sendKeys("VARSHIMAKER");
+		driver.findElement(By.xpath("//input[@id='user_pwd']")).sendKeys("Prova@2024$");
 		driver.findElement(By.id("fc_sbmit")).click();
 		Thread.sleep(2000);
+		WebElement Frame = driver.findElement(By.xpath("//iframe[@title='Confirmation Message']"));
+		driver.switchTo().frame(Frame);
+		driver.findElement(By.xpath("//input[@id='BTN_OK']")).click();
+		driver.switchTo().parentFrame();
 	}
 	public void fast_path() throws InterruptedException, MalformedURLException  {
 		WebElement e3 =driver.findElement(By.xpath("//iframe[@title='Information Message']"));

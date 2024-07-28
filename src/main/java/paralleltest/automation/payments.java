@@ -1,15 +1,13 @@
 package paralleltest.automation;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -18,12 +16,13 @@ public class payments {
 
 	@Test
 	public void Internalpay() throws InterruptedException, MalformedURLException {
-		URL url = new URL("http://localhost:4444");
-		DesiredCapabilities capp = new DesiredCapabilities();
-		capp.setBrowserName("chrome");
-		capp.setPlatform(Platform.WINDOWS);
-		WebDriver driver = new RemoteWebDriver(url, capp);
-//		WebDriver driver=new ChromeDriver();
+//		URL url = new URL("http://localhost:4444");
+//		DesiredCapabilities capp = new DesiredCapabilities();
+//		capp.setBrowserName("chrome");
+//		capp.setPlatform(Platform.WINDOWS);
+//		WebDriver driver = new RemoteWebDriver(url, capp);
+		WebDriver driver=new ChromeDriver();
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://sitgbonline.e-gulfbank.com/?page=home");
