@@ -17,19 +17,19 @@ import org.testng.annotations.Test;
 public class customerCreation {
 	@Test
 	public void STDCIF() throws InterruptedException, MalformedURLException {
-		URL url = new URL("http://localhost:4444");
-		ChromeOptions chromeOptions = new ChromeOptions();
-		//chromeOptions.addArguments("--headless");
+		// URL url = new URL("http://localhost:4444");
+		// ChromeOptions chromeOptions = new ChromeOptions();
+		// //chromeOptions.addArguments("--headless");
 		
-		DesiredCapabilities capp = new DesiredCapabilities();
-		capp.setBrowserName("chrome");
-		capp.setPlatform(Platform.WINDOWS);
-		capp.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-		capp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-		WebDriver driver = new RemoteWebDriver(url, capp);
+		// DesiredCapabilities capp = new DesiredCapabilities();
+		// capp.setBrowserName("chrome");
+		// capp.setPlatform(Platform.WINDOWS);
+		// capp.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+		// capp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		// WebDriver driver = new RemoteWebDriver(url, capp);
 		
 		try {
-			// WebDriver driver = new ChromeDriver();
+			 WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			driver.get("https://10.20.9.23:9004/FCJNeoWeb/LoginServlet?entity=ENTITY_ID1");
