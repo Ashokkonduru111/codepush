@@ -17,11 +17,12 @@ public class STDCIFpage {
 	WebDriver driver;
 	
 	public void login() throws InterruptedException, MalformedURLException  {
-//		URL url = new URL("http://localhost:4444");
-//		DesiredCapabilities capp = new DesiredCapabilities();
-//		capp.setBrowserName("chrome");
-//		capp.setPlatform(Platform.WINDOWS);
-//		driver = new RemoteWebDriver(url, capp);
+		URL url = new URL("http://localhost:4444");
+		//URL url =new URL ("http://192.168.1.2:5555");
+		DesiredCapabilities capp = new DesiredCapabilities();
+		capp.setBrowserName("chrome");
+		capp.setPlatform(Platform.WINDOWS);
+		driver = new RemoteWebDriver(url, capp);
 				WebDriver driver=new ChromeDriver();
 				
 		driver.manage().window().maximize();

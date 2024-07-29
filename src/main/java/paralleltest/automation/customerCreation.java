@@ -44,8 +44,8 @@ public class customerCreation {
 			driver.findElement(By.xpath("//body[contains(@onload,'chkErr')]//input[@onclick='closeAlerts(event)']"))
 					.click();
 			driver.switchTo().parentFrame();
-			driver.findElement(By.xpath("//input[@id='LOGINUSERID']")).sendKeys("VARSHIMAKER");
-			driver.findElement(By.xpath("//input[@id='user_pwd']")).sendKeys("Prova@2024$");
+			driver.findElement(By.xpath("//input[@id='LOGINUSERID']")).sendKeys("ASHOKMAKER");
+			driver.findElement(By.xpath("//input[@id='user_pwd']")).sendKeys("Ashok@321");
 			driver.findElement(By.id("fc_sbmit")).click();
 			Thread.sleep(2000);
 			WebElement Frame = driver.findElement(By.xpath("//iframe[@title='Confirmation Message']"));

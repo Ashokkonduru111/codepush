@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="TestOnChrome(failed)">
-    <classes>
-      <class name="paralleltest.automation.payments">
-        <methods>
-          <include name="Internalpay"/>
-        </methods>
-      </class> <!-- paralleltest.automation.payments -->
-    </classes>
-  </test> <!-- TestOnChrome(failed) -->
   <test thread-count="2" parallel="tests" name="TestOnfirefox(failed)">
     <classes>
       <class name="paralleltest.automation.customerCreation">
@@ -19,4 +10,13 @@
       </class> <!-- paralleltest.automation.customerCreation -->
     </classes>
   </test> <!-- TestOnfirefox(failed) -->
+  <test thread-count="2" parallel="tests" name="TestOnChrome(failed)">
+    <classes>
+      <class name="paralleltest.automation.payments">
+        <methods>
+          <include name="Internalpay"/>
+        </methods>
+      </class> <!-- paralleltest.automation.payments -->
+    </classes>
+  </test> <!-- TestOnChrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
